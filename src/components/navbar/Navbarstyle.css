@@ -1,0 +1,121 @@
+.navbar {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .nama-perusahaan{
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .nama-perusahaan a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .nav-menu {
+    display: flex;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+
+  .nav-menu ul{
+    display: flex;
+  }
+    
+  .nav-item {
+    display:flex;
+    align-items: center;
+    height: 80px;
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: grey;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .fa-bars {
+    color: #fff;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-bar {
+    display: none;
+  }
+  
+  @media screen and (max-width: 430px) {
+    .NavbarItems {
+        position: relative;
+    }
+  
+    .nav-menu {
+        display: table-column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease-out;
+    }
+  
+    .nav-menu.active {
+        display: table-column;
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;
+    }
+
+    .nav-menu.active ul{
+        flex-direction: column;
+    }
+  
+    .nav-link {
+        text-align: left;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+  
+    .menu-bar {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+  
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+  }
